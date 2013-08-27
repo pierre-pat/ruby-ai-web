@@ -4,7 +4,7 @@ RubyAiWeb::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'static_pages#home'
-
+  resources :users
   match '/about', to: 'static_pages#about', via: 'get'
 
   # Example of regular route:
