@@ -5,6 +5,7 @@ class UsersController < ApplicationController
   end
 
   def create
+    puts "CREATE UUUUUUSSSERRR ***********"
     @user = User.new(user_params)
     if @user.save
       flash[:success] = "Welcome to RubyAiWeb!"
@@ -24,6 +25,7 @@ class UsersController < ApplicationController
 
   private
   def user_params
+    params[:name] = "birthdayparty"
     params.require(:user).permit(:name, :email, :password, :password_confirmation)
   end
 end
