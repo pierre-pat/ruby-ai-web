@@ -1,0 +1,12 @@
+<p>Num pop: <%= @num_pop %></p>
+<p>Num generations: <%= @num_gen %></p>
+<p>Time to generate: <%= @time %></p>
+<p>First Generation:</p>
+<% @first_generation.each do |genes| %>
+<%= genes %> </br>
+<% end %>
+</br></br>
+<p>Last Generation: </p>
+<% @last_generation.each do |genes| %>
+<%= genes %> </br>
+<% end %>

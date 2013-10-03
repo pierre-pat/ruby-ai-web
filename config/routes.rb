@@ -9,6 +9,9 @@ RubyAiWeb::Application.routes.draw do
 
   match '/about', to: 'static_pages#about', via: 'get'
 
+  match '/experiences/genetic_typer', to: 'experiences#genetic_typer', via: 'get'
+  match '/experiences/genetic_typer_run', to: 'experiences#genetic_typer_run', via: 'post'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
