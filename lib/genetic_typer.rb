@@ -13,7 +13,7 @@ module GeneticTyper
       if genes
         @genes = genes.downcase
       else
-        @genes = ''
+        @genes = ""
         length.times { @genes << MOLECULES[rand(MOLECULES.size)] }
       end
     end
