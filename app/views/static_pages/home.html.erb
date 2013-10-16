@@ -1,9 +1,9 @@
 <div class="center hero-unit">
   <h1>Welcome to RubyAiWeb</h1>
 
-  <h2>
+  <h3>
     <%= link_to 'The show-room for AI written in Ruby!' %>
-  </h2>
+  </h3>
   <% if !user_signed_in? %>
     <%= link_to 'Sign up now!', new_user_registration_path, class: 'btn btn-large btn-primary' %>
   <% else %>
@@ -11,6 +11,14 @@
   <% end %>
 </div>
 
+<div class="row">
+  <div class="span4 offset3">
+    <h2>Experiences</h2>
+    <p><%= link_to "Genetic Typer", experiences_genetic_typer_path %></p>
+  </div>
 
-  <div>Experiences:</div>
-  <%= link_to "Genetic Typer", experiences_genetic_typer_path %>
+  <div class="span3">
+    <h2>Games</h2>
+    <p>Coming ...</p>
+  </div>
+</div>
