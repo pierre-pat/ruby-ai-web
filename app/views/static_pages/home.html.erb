@@ -4,6 +4,7 @@
   <h3>
     <%= link_to 'The show-room for AI written in Ruby!' %>
   </h3>
+  <br/>
   <% if !user_signed_in? %>
     <%= link_to 'Sign up now!', new_user_registration_path, class: 'btn btn-large btn-primary' %>
   <% else %>
