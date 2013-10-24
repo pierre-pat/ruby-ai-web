@@ -5,7 +5,7 @@ class ExperiencesController < ApplicationController
 
 	def genetic_typer_run
 		@num_gen = params[:num_gen].to_i
-		@num_gen = GS_MAX_GEN if @num_gen > GS_MAX_GEN
+		@num_gen = GA_MAX_GEN if @num_gen > GA_MAX_GEN
 		@num_gen = 1 if @num_gen < 1
 		@num_pop = params[:num_pop].to_i
 		@num_pop = GA_MAX_POP if @num_pop > GA_MAX_POP
@@ -16,11 +16,11 @@ class ExperiencesController < ApplicationController
 		@mutation_rate = 0 if @mutation_rate < 1
 
 		ga = GeneticTyper::GeneticAlgorithm.new(@sentence, @num_pop, @num_gen, @mutation_rate)
-		@first_generation = ga.population.map {|dna| dna.genes}
+		@first_generation = ga.population.inject("") { |result, dna| result << dna.genes << '\n' }
 		start = Time.now
 		ga.run
 		@time = Time.now - start
-		@last_generation = ga.population.map {|dna| dna.genes}
+		@last_generation = ga.population.inject("") { |result, dna| result << dna.genes << '\n' }
 
 		respond_to do |format|
 			format.html

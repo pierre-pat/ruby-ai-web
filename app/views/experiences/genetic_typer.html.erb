@@ -15,7 +15,7 @@ By tweaking the values, you should be able to test and see what is a good deal b
 <%= form_tag('/experiences/genetic_typer_run', remote: true) do %>
   <div class="row">
     <div class="span3"><%= label :sentence, 'Type in a sentence to find:' %></div>
-    <div class="span6"><%= text_field_tag :sentence, 'to be or not not be' %></div>
+    <div class="span6"><%= text_field_tag :sentence, 'to be or not to be' %></div>
   </div>
 
   <div class="row">
@@ -44,9 +44,9 @@ By tweaking the values, you should be able to test and see what is a good deal b
 
 <div class="row">
   <div class="span5">
-    <textarea id="first_generation"></textarea>
+    <textarea id="first_generation" rows="10"></textarea>
   </div>
   <div class="span5 offset2">
-    <textarea id="last_generation"></textarea>
+    <textarea id="last_generation" rows="10"></textarea>
   </div>
 </div>

@@ -1,7 +1,5 @@
 $('#first_generation').text("<%= @first_generation %>");
 $('#last_generation').text("<%= @last_generation %>");
 $('#running').hide();
-var $time = $('#time');
-$time.text("It ran for <%= @time %> seconds");
-$time.show();
+$('#time').text("It ran for <%= @time %> seconds").show();
 $('body').css('cursor', 'default');
